@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="591.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sandhata.gcat.application.controller.OperationsController">
+    
+   <children>
+      <ListView id="lExistingList" fx:id="lExistingList" layoutX="60.0" layoutY="128.0" onMouseClicked="#existingLVMouseClicked" prefHeight="200.0" prefWidth="200.0" />
+      <ListView id="lDesiredList" fx:id="lDesiredList" layoutX="338.0" layoutY="128.0" onMouseClicked="#desiredLVMouseClicked" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="238.0" layoutY="29.0" text="Instance" />
+      <Label id="instance" fx:id="instance" layoutX="296.0" layoutY="30.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="65.0" layoutY="101.0" text="Existing" />
+      <Label layoutX="342.0" layoutY="102.0" text="Desired" />
+      <TextField id="tfExisting" fx:id="tfExisting" layoutX="110.0" layoutY="98.0" onKeyTyped="#existingLVSearchKeyTyped" promptText="Type to Search..." />
+      <Button id="bmoveToDesired" fx:id="bmoveToDesired" layoutX="287.0" layoutY="179.0" mnemonicParsing="false" onAction="#moveToDesiredClicked" text="-&gt;" />
+      <Button id="bmoveToExisting" fx:id="bmoveToExisting" layoutX="287.0" layoutY="229.0" mnemonicParsing="false" onAction="#moveToExistingClicked" text="&lt;-" />
+      <Label layoutX="72.0" layoutY="337.0" text="Total Count :-" />
+      <Label id="count" fx:id="count" layoutX="157.0" layoutY="337.0" prefHeight="17.0" prefWidth="44.0" />
+      <Button id="bSave" fx:id="bSave" disable="true" layoutX="221.0" layoutY="370.0" mnemonicParsing="false" onAction="#saveClicked" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button id="bCancel" fx:id="bCancel" cancelButton="true" layoutX="347.0" layoutY="370.0" mnemonicParsing="false" onAction="#cancelClicked" text="Cancel" />
+      <Button id="partnerList" fx:id="partnerList" layoutX="13.0" layoutY="405.0" mnemonicParsing="false" onAction="#partnerClicked" prefHeight="67.0" prefWidth="131.0" text="Click for Partner List " />
+      <ListView id="lvpartner" fx:id="lvpartner" layoutX="147.0" layoutY="405.0" onMouseClicked="#partnerLisiViewMouseClicked" prefHeight="67.0" prefWidth="398.0" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sandhata.gcat.application.controller.SettingsController">
+   <left>
+      <VBox prefHeight="213.0" prefWidth="113.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Config File Base Path" />
+            <Label text="GIT Repo Path" />
+            <Label text="Output File Directory" />
+            <Label text="Git Bash Path" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="15.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="208.0" prefWidth="400.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="23.0" prefWidth="400.0">
+               <children>
+                  <TextField id="tfConfigFilePath" fx:id="tfConfigFilePath" prefHeight="25.0" prefWidth="215.0" />
+                  <Button id="bConfigFileChoose" fx:id="bConfigFileChoose" mnemonicParsing="false" onAction="#configFileChooseClicked" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #95adbe;" text="Browse" />
+               </children>
+            </HBox>
+            <TextField id="tfGitRepoPath" fx:id="tfGitRepoPath" />
+            <HBox prefHeight="26.0" prefWidth="297.0">
+               <children>
+                  <TextField id="tfOutputFilePath" fx:id="tfOutputFilePath" prefHeight="25.0" prefWidth="180.0" />
+                  <Button id="bOutputFileChoose" fx:id="bOutputFileChoose" mnemonicParsing="false" onAction="#outputFileChooseClicked" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #95adbe;" text="Browse" />
+               </children>
+            </HBox>
+            <TextField id="tfGitBashPath" fx:id="tfGitBashPath" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Button id="bSave" fx:id="bSave" mnemonicParsing="false" onAction="#saveClicked" prefWidth="70.0" style="-fx-background-color: #95adbe;" text="Save" />
+                  <Button id="bCancel" fx:id="bCancel" mnemonicParsing="false" onAction="#cancelClicked" prefWidth="70.0" style="-fx-background-color: #95adbe;" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets left="80.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="15.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="213.0" prefWidth="267.0" spacing="18.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="38.0" prefWidth="267.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="306.0" stylesheets="@../com/sandhata/gcat/application/css/settings.css" text="Instance subfolder " />
+                  <Label text="(Make sure to select the root folder)" />
+               </children>
+            </VBox>
+            <Label text="Link to the GIT Repository" />
+            <VBox prefHeight="21.0" prefWidth="273.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="273.0" text="Directory where the configuration files will " />
+                  <Label text="be generated" />
+               </children>
+            </VBox>
+            <Label text="Path to GIT client executable" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="15.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>
